@@ -21,8 +21,6 @@ public class CityscapeComponent extends JComponent
         this.m= m;
         Fish fish= new Fish(50+time*100,100);
 
-        fish.draw(g2);
-
     }
     // define the CityscapeComponent contructor and intiailize all instance variables
     // ...
@@ -77,7 +75,7 @@ public class CityscapeComponent extends JComponent
     }
     
 }
-fish.move();
+
 
 }
     /**
