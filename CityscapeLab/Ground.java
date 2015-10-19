@@ -18,6 +18,7 @@ public class Ground
 
     /**
      * Default constructor for objects of class Ground
+     * @param two ints, are their starting position. The first parameter creates how far right or left. The Second parameter decides how high or how low. 
      */
     public Ground(int x, int y)
     {
