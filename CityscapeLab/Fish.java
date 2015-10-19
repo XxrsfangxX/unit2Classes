@@ -6,7 +6,7 @@ import java.awt.geom.Rectangle2D;
 
 
 /**
- * Write a description of class Fish here.
+ * This class creates a fish object
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -16,8 +16,10 @@ public class Fish
     /** description of instance variable x (add comment for each instance variable) */
     private int xleft;
     private int ybottom;
+    private int distance=0;
     /**
      * Default constructor for objects of class Fish
+     * @param two ints, are their starting position. The first parameter creates how far right or left. The Second parameter decides how high or how low. 
      */
     public Fish(int x, int y)
     {
@@ -26,23 +28,16 @@ public class Fish
         ybottom= y;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
-     *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+    /** 
+     * This method draws the fish
+     *@param Graphics 2d g2
      */
     public void draw(Graphics2D g2)
     {
         // put your code here
-        Ellipse2D.Double body= new Ellipse2D.Double(xleft, ybottom, 200, 100);
-        Rectangle2D.Double fin= new Rectangle2D.Double(xleft-50, ybottom+10, 50,100);
-        Ellipse2D.Double eye= new Ellipse2D.Double(xleft+125, ybottom+30, 25,25);
+        Ellipse2D.Double body= new Ellipse2D.Double(xleft+distance, ybottom, 200, 100);
+        Rectangle2D.Double fin= new Rectangle2D.Double(xleft-50+distance, ybottom+10, 50,100);
+        Ellipse2D.Double eye= new Ellipse2D.Double(xleft+125+distance, ybottom+30, 25,25);
         
         g2.setColor(Color.red);
         g2.draw(body);
@@ -56,20 +51,15 @@ public class Fish
     }
     
     /**
-     * An example of a method - replace this comment with your own
-     *  that describes the operation of the method
-     *
-     * @pre     preconditions for the method
-     *          (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *          (what the method guarantees upon completion)
-     * @param   y   description of parameter y
-     * @return  description of the return value
+     * This method moves the fish right a certain distance
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return y;
+    public void swim(){
+        if (distance<=1320){distance+=60;
     }
+        else
+        distance=0;
+        }
+   }
+   
+        
 
-}

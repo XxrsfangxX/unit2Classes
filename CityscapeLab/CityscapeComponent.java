@@ -16,10 +16,11 @@ public class CityscapeComponent extends JComponent
     private int n;
     private int m=0;
     private int time=0;
+    Fish fish;
     public CityscapeComponent(int n,int m){
         this.n= n;
         this.m= m;
-        Fish fish= new Fish(50+time*100,100);
+        this.fish= new Fish(50,100);
 
     }
     // define the CityscapeComponent contructor and intiailize all instance variables
@@ -40,6 +41,7 @@ public class CityscapeComponent extends JComponent
         background.draw(g2);
         Ground ground= new Ground(0,900);
         ground.draw(g2);
+        fish.draw(g2);
         int l;
     for ( int z= 0; z<m; z++){
      for( int i=0; i< n; i++){
@@ -87,7 +89,7 @@ public class CityscapeComponent extends JComponent
         // update the objects in the cityscape so they are animated
         // ...
         time+=1;
-        
+        fish.swim();
         
         // request that the Java Runtime repaints this component by invoking its paintComponent method
         repaint();
