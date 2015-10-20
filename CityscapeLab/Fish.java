@@ -29,7 +29,7 @@ public class Fish
     }
 
     /** 
-     * This method draws the fish
+     * This method draws the fish.
      *@param Graphics 2d g2
      */
     public void draw(Graphics2D g2)
