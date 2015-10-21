@@ -18,6 +18,10 @@ public class Base
     
     /**
      * Default constructor for objects of class Building
+    * @pre
+     * @post
+     * @param 2 integer parameters that determine the x cordinate and y cordinate of the object.
+     * @return
      */
     public Base(int x, int y)
     {
@@ -30,13 +34,10 @@ public class Base
     /**
      * An example of a method - replace this comment with your own
      *    that describes the operation of the method
-     *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * @pre
+     * @post
+     * @param The parameter is the graphics 2d. Which is the base for the drawing.
+     * @return
      */
     public void draw(Graphics2D g2)
     {

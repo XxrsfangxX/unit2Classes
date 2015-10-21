@@ -16,8 +16,14 @@ public class Fish
     /** description of instance variable x (add comment for each instance variable) */
     private int xleft;
     private int ybottom;
+    private int distance=0;
     /**
+     * 
      * Default constructor for objects of class Fish
+     * @pre
+     * @post
+     * @param 2 integer parameters that determine the x cordinate and y cordinate of the object.
+     * @return
      */
     public Fish(int x, int y)
     {
@@ -27,22 +33,18 @@ public class Fish
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
-     *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * This method draws the fish.
+     * @pre
+     * @post
+     * @return
+     * @param    Parameter is Graphics 2D g2. Which is the base of the image.
      */
     public void draw(Graphics2D g2)
     {
         // put your code here
-        Ellipse2D.Double body= new Ellipse2D.Double(xleft, ybottom, 200, 100);
-        Rectangle2D.Double fin= new Rectangle2D.Double(xleft-50, ybottom+10, 50,100);
-        Ellipse2D.Double eye= new Ellipse2D.Double(xleft+125, ybottom+30, 25,25);
+        Ellipse2D.Double body= new Ellipse2D.Double(xleft+distance, ybottom, 200, 100);
+        Rectangle2D.Double fin= new Rectangle2D.Double(xleft-50+distance, ybottom+10, 50,100);
+        Ellipse2D.Double eye= new Ellipse2D.Double(xleft+125+distance, ybottom+30, 25,25);
         
         g2.setColor(Color.red);
         g2.draw(body);
@@ -56,20 +58,16 @@ public class Fish
     }
     
     /**
-     * An example of a method - replace this comment with your own
-     *  that describes the operation of the method
-     *
-     * @pre     preconditions for the method
-     *          (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *          (what the method guarantees upon completion)
-     * @param   y   description of parameter y
-     * @return  description of the return value
+     * This method moves the position of the fish 60 pixels to the left.
      */
-    public int sampleMethod(int y)
+    public void swim()
     {
         // put your code here
-        return y;
+        if (distance<1800){    
+        distance+=60;
     }
-
+    else{
+    distance=0;
+}
+}
 }
