@@ -6,7 +6,7 @@ import java.awt.geom.Rectangle2D;
 
 
 /**
- * Write a description of class Fish here.
+ * This class creates a fish object
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -20,10 +20,14 @@ public class Fish
     /**
      * 
      * Default constructor for objects of class Fish
+<<<<<<< HEAD
      * @pre
      * @post
      * @param 2 integer parameters that determine the x cordinate and y cordinate of the object.
      * @return
+=======
+     * @param two ints, are their starting position. The first parameter creates how far right or left. The Second parameter decides how high or how low. 
+>>>>>>> origin/master
      */
     public Fish(int x, int y)
     {
@@ -32,12 +36,18 @@ public class Fish
         ybottom= y;
     }
 
+<<<<<<< HEAD
     /**
      * This method draws the fish.
      * @pre
      * @post
      * @return
      * @param    Parameter is Graphics 2D g2. Which is the base of the image.
+=======
+    /** 
+     * This method draws the fish.
+     *@param Graphics 2d g2
+>>>>>>> origin/master
      */
     public void draw(Graphics2D g2)
     {
@@ -58,6 +68,7 @@ public class Fish
     }
     
     /**
+<<<<<<< HEAD
      * This method moves the position of the fish 60 pixels to the left.
      */
     public void swim()
@@ -71,3 +82,17 @@ public class Fish
 }
 }
 }
+=======
+     * This method moves the fish right a certain distance
+     */
+    public void swim(){
+        if (distance<=1320){distance+=60;
+    }
+        else
+        distance=0;
+        }
+   }
+   
+        
+
+>>>>>>> origin/master

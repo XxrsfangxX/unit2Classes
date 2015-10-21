@@ -15,10 +15,14 @@ public class Background
     private int ybottom;
     /**
      * Default constructor for objects of class Background
+<<<<<<< HEAD
      * @pre
      * @post
      * @param 2 integer parameters that determine the x cordinate and y cordinate of the object.
      * @return
+=======
+     * @param two ints, are their starting position. The first parameter creates how far right or left. The Second parameter decides how high or how low. 
+>>>>>>> origin/master
      */
     public Background(int x, int y)
     {
@@ -28,12 +32,16 @@ public class Background
     }
 
     /**
+<<<<<<< HEAD
      *This method draws the background 
      * @pre
      * @post
  
      * @return
     *@param    Parameter is Graphics 2D g2. Which is the base of the image.
+=======
+     * This method draws the background
+>>>>>>> origin/master
      */
     public void draw(Graphics2D g2)
     {

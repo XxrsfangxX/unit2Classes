@@ -6,7 +6,7 @@ import java.awt.geom.Rectangle2D;
 
 
 /**
- * Write a description of class Pillar here.
+ * This is a class that creates a pillar.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -17,11 +17,16 @@ public class Pillar
     private int xleft;
     private int ybottom;
     /**
+<<<<<<< HEAD
      * Default constructor for objects of class Pillar
      * @pre
      * @post
      * @param 2 integer parameters that determine the x cordinate and y cordinate of the object.
      * @return
+=======
+     * This is the constructor for the pillar class
+     * @param two ints, are their starting position. The first parameter creates how far right or left. The Second parameter decides how high or how low. 
+>>>>>>> origin/master
      */
     public Pillar(int x, int y)
     {
@@ -31,6 +36,7 @@ public class Pillar
     }
 
     /**
+<<<<<<< HEAD
      * This method draws a pillar
      
      * @pre
@@ -38,6 +44,9 @@ public class Pillar
      * @return
      *           
      * @param    Parameter is Graphics 2D g2. Which is the base of the image.
+=======
+     * This method draws the pillar
+>>>>>>> origin/master
      */
     public void draw(Graphics2D g2)
     {
